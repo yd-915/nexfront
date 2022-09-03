@@ -1,4 +1,10 @@
- {
+
+{
+  "$schema": "https://nexnotesapp.herokuapp.com//vercel.json",
+  "rewrites": [
+    {
       "source": "/",
       "destination": "/index.html"
     },
+   ]
+}

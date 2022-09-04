@@ -1,7 +1,6 @@
-const baseUrl = 'https://nexnotesapp.herokuapp.com/';
 
 export async function createChatRoom(receiver, message) {
-    return (await fetch(`${baseUrl}/messages/createChatRoom`, {
+    return (await fetch(`https://nexnotesapp.herokuapp.com/messages/createChatRoom`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -12,11 +11,11 @@ export async function createChatRoom(receiver, message) {
 }
 
 export async function getUserConversations() {
-    return (await fetch(`${baseUrl}/messages/getUserConversations`, { credentials: 'include' })).json();
+    return (await fetch(`https://nexnotesapp.herokuapp.com/messages/getUserConversations`, { credentials: 'include' })).json();
 }
 
 export async function sendMessage(chatId, message) {
-    return (await fetch(`${baseUrl}/messages/sendMessage`, {
+    return (await fetch(`https://nexnotesapp.herokuapp.com/messages/sendMessage`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
